@@ -998,6 +998,8 @@ input:hover {
 .all-form {
   display: flex;
   margin-top: 20px;
+}
+.signup-form {
   margin-left: 93px;
 }
 /*Модалка*/
@@ -1043,6 +1045,7 @@ input:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
+  padding: 30px;
 }
 
 .button-close {
@@ -1086,13 +1089,17 @@ input:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
   margin-bottom: 12px;
+  margin-top: 0px;
+  padding: 0px;
 }
 .person {
   position: relative;
+  margin-bottom: 10px;
+}
+.person:focus-within {
+  fill: #2196f3;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-form:hover,
 .input-form:focus {
@@ -1103,8 +1110,9 @@ input:hover {
 }
 .icon-person {
   position: absolute;
-  left: 55px;
+  left: 15px;
   top: 25px;
+  padding-right: 5px;
   transform: translateY(-50%);
 }
 .icon-person:hover,
@@ -1123,7 +1131,6 @@ input:hover {
   line-height: 14px;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-left: 40px;
   margin-bottom: 4px;
   padding: 0px;
 }
@@ -1136,13 +1143,11 @@ input:hover {
   box-sizing: border-box;
   border-radius: 4px;
   background: var(--title);
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
   margin-top: 4px;
   padding: 11px 30px;
   color: var(--black);
 }
+
 .button-send {
   width: 200px;
   height: 50px;
@@ -1159,10 +1164,8 @@ input:hover {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--title);
-  margin-left: 164px;
-  margin-right: 164px;
+  margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 40px;
   cursor: pointer;
 }
 .coment {
@@ -1171,13 +1174,16 @@ input:hover {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
+  resize: none;
+  margin-top: 4px;
+}
+
+.coment-person {
+  margin-bottom: 20px;
 }
 textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -1186,6 +1192,18 @@ textarea::placeholder {
   line-height: 16px;
   letter-spacing: 0.01em;
 }
+textarea:focus,
+textarea:hover {
+  outline: none !important;
+  border: 1px solid #2196f3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.text-coment {
+  margin: 0px;
+}
+
 .checkbox-name {
   display: flex;
   font-family: Roboto;
@@ -1206,13 +1224,12 @@ textarea::placeholder {
 .accept-label {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .check-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border: 2px solid (var(--black));
+  border: 2px;
   border-radius: 2px;
   cursor: pointer;
   margin: 0px;

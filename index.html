@@ -270,7 +270,7 @@
                     </svg></a></li>
         </ul>        
     </div>
-<form name="signup_form" autocomplete="on" novalidate>
+<form class="signup-form" name="signup_form" autocomplete="on" novalidate>
 
     <h3 class="name-form">Подпишитесь на рассылку</h3>
     <div class="all-form">
@@ -289,10 +289,16 @@
         </div>
 </footer>
 
-/*Модалка*/
+
 
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
+        <button type="button" class="button-close" data-modal-close>
+            <svg class="close" width="30" height="30">
+                <use href="./images/icons.svg/symbol-defs-2.svg#icon-close">
+                </use>
+            </svg>
+        </button>
         <form>
             <h3 class="title-form">Оставьте свои данные, мы вам перезвоним</h3>
 <div>
@@ -323,9 +329,9 @@
             </svg>
             </div>
             </div>
-            <div>
+            <div class="coment-person">
             <label class="for-modal-label" for="coment-box">Комментарий</label>
-                <textarea class="coment" name="feedback" rows="5" placeholder="Введите текст"></textarea>
+             <p class="text-coment"><textarea class="coment" name="feedback" rows="5" placeholder="Введите текст"></textarea></p>
             </div>
                 <label class="accept-label">
                 <input type="checkbox" class="check-icon">
@@ -334,13 +340,7 @@
             <button class="button-send" type="submit">Отправить</button>
 
         </form>
-        <button type="button" class="button-close" data-modal-close>
-            <svg class="close" width="30" height="30">
-                <use href="./images/icons.svg/symbol-defs-2.svg#icon-close">
-                </use>
-            </svg>
-
-        </button>
+        
     </div>
 </div>
 
