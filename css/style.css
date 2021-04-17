@@ -501,17 +501,14 @@ img {
   background: rgba(47, 48, 58, 0.8);
   opacity: 1;
   width: 370px;
-  padding-top: 27px;
-  padding-right: 82px;
-  padding-bottom: 27px;
-  padding-left: 82px;
+  height: 70px;
   margin: 0;
-  position: relative;
+  position: absolute;
   align-items: center;
   justify-content: center;
   display: flex;
-  top: 294px;
-  left: 1px;
+  top: 1428px;
+  left: 51px;
 }
 .name-box-two {
   font-family: Roboto;
@@ -524,17 +521,14 @@ img {
   background: rgba(47, 48, 58, 0.8);
   opacity: 1;
   width: 370px;
-  padding-top: 27px;
-  padding-right: 85px;
-  padding-bottom: 27px;
-  padding-left: 85px;
+  height: 70px;
   margin: 0;
-  position: relative;
+  position: absolute;
   align-items: center;
   justify-content: center;
   display: flex;
-  top: 294px;
-  left: 1px;
+  top: 1428px;
+  left: 451px;
 }
 .name-box-three {
   font-family: Roboto;
@@ -547,17 +541,14 @@ img {
   background: rgba(47, 48, 58, 0.8);
   opacity: 1;
   width: 370px;
-  padding-top: 27px;
-  padding-right: 90px;
-  padding-bottom: 27px;
-  padding-left: 90px;
+  height: 70px;
   margin: 0;
-  position: relative;
+  position: absolute;
   align-items: center;
   justify-content: center;
   display: flex;
-  top: 294px;
-  left: 1px;
+  top: 1428px;
+  left: 851px;
 }
 .img-two {
   display: block;
@@ -720,6 +711,17 @@ img {
   transition-delay: 0s;
   opacity: 0;
 }
+.overlay:focus {
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
+  opacity: 0;
+}
 .overlay-text {
   position: absolute;
   display: flex;
@@ -731,11 +733,13 @@ img {
   letter-spacing: 0.03em;
   color: var(--title);
 }
-.images-card:hover .overlay {
+.images-card:hover .overlay,
+.images-card:focus .overlay {
   transform: translateY(0);
   opacity: 1;
 }
-.images-last:hover .overlay {
+.images-last:hover .overlay,
+.images-last:focus .overlay {
   transform: translateY(0);
   opacity: 1;
 }
@@ -761,13 +765,14 @@ img {
 }
 .images-card {
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
 }
-.images-card:hover {
+.images-card:hover,
+.images-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -784,7 +789,8 @@ li:nth-child(n + 7) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
 }
-.images-last:hover {
+.images-last:hover,
+.images-last:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1078,6 +1084,7 @@ input:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden.modal {
   transform: translate(-50%, -50%) scale(0.9);
@@ -1086,6 +1093,8 @@ input:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
+  opacity: 1;
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -1102,7 +1111,11 @@ input:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
-  padding: 30px;
+  padding-top: 25px;
+  padding-right: 39px;
+  padding-left: 41px;
+  opacity: 1;
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close {
@@ -1146,7 +1159,7 @@ input:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0px;
   padding: 0px;
 }
@@ -1198,6 +1211,7 @@ input:hover {
   top: 382px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
+  box-shadow: none !important;
   border-radius: 4px;
   background: var(--title);
   margin-top: 4px;
@@ -1206,11 +1220,12 @@ input:hover {
 }
 
 .button-send {
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   font-family: Roboto;
   font-weight: bold;
   font-size: 16px;
@@ -1221,9 +1236,12 @@ input:hover {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--title);
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 0px auto;
   cursor: pointer;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 56px;
 }
 .coment {
   width: 448px;
@@ -1241,6 +1259,7 @@ input:hover {
 
 .coment-person {
   margin-bottom: 20px;
+  justify-content: center;
 }
 textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -1281,9 +1300,12 @@ textarea:hover {
 .accept-label {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 .check-icon {
   display: inline-block;
+  justify-content: center;
   width: 16px;
   height: 15px;
   border: 2px;
