@@ -1114,6 +1114,7 @@ input:hover {
   padding-top: 25px;
   padding-right: 39px;
   padding-left: 41px;
+  padding-bottom: 18px;
   opacity: 1;
   animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
