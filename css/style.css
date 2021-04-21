@@ -547,14 +547,7 @@ img {
   display: flex;
   top: 1428px;
 }
-.img-two {
-  display: block;
-  margin-right: 30px;
-}
-.img-three {
-  display: block;
-  margin-right: 0px;
-}
+
 .team {
   background: var(--button);
   padding-top: 94px;
@@ -1005,10 +998,8 @@ label {
 }
 input {
   width: 358px;
-  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: #2f303a;
   padding-left: 16px;
@@ -1112,10 +1103,7 @@ input:hover {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0s;
   transition: transform 250ms ease-in-out 1s;
-  padding-top: 25px;
-  padding-right: 39px;
-  padding-left: 41px;
-  padding-bottom: 18px;
+  padding: 40px;
   opacity: 1;
   animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1150,6 +1138,12 @@ input:hover {
   color: #2196f3;
   box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.button-close:hover,
+.button-close:focus {
+  color: #2196f3;
+  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .title-form {
   font-family: Roboto;
   font-weight: bold;
@@ -1183,7 +1177,7 @@ input:hover {
 .icon-person {
   position: absolute;
   left: 15px;
-  top: 25px;
+  top: 40px;
   padding-right: 5px;
   transform: translateY(-50%);
 }
@@ -1208,12 +1202,9 @@ input:hover {
 }
 .input-form {
   outline: none;
-  width: 448px;
-  left: 576px;
-  top: 382px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  box-shadow: none !important;
   border-radius: 4px;
   background: var(--title);
   margin-top: 4px;
